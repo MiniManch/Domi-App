@@ -1,0 +1,27 @@
+.square{
+  aspect-ratio: 1/1;
+  width:15vw !important;
+}
+
+
+.rectangle{
+  width:10vw !important;
+  object-fit: cover;
+}
+
+.not-visible {
+  opacity: 0;
+  display: none;
+  transition: opacity 1s;
+}
+
+#Hand{
+  position: relative;
+  left:10vh;
+  top:10vh;
+}
+
+.imageGrid{
+  width:80% !important;
+  margin: auto !important;
+}
