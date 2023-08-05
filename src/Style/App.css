@@ -1,12 +1,17 @@
 .square{
   aspect-ratio: 1/1;
   width:15vw !important;
-}
+  display: inline-block;
 
+}
+body,html{
+  overflow-x: hidden;
+}
 
 .rectangle{
   width:10vw !important;
   object-fit: cover;
+
 }
 
 .not-visible {
@@ -16,9 +21,6 @@
 }
 
 #Hand{
-  position: relative;
-  left:10vh;
-  top:10vh;
 }
 
 .imageGrid{
