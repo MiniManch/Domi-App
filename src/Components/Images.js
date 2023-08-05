@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import { Grid, Card, CardMedia } from '@mui/material';
+import { Card, CardMedia } from '@mui/material';
 import 'animate.css/animate.min.css';
+import generateRandomAttributes from '../utils';
 
 const AnimateOnScroll = ({ imageList }) => {
   const scrollTimeoutRef = useRef(null);
@@ -34,10 +35,13 @@ const AnimateOnScroll = ({ imageList }) => {
     };
   }, []);
 
+  // Generate random positions for imageList
+  const positionedImages = generateRandomAttributes(imageList);
+
   return (
-    <Grid className='imageGrid' container spacing={3}>
-      {imageList.map((image) => (
-        <Grid  item xs={12} sm={6} md={4} key={image.id}>
+    <div className='imageGrid'>
+      {positionedImages.map((image) => (
+        <div key={image.id} style={{ top: `${image.top}vw`, left: `${image.left}vw`, position: 'relative' }}>
           <Card style={{ backgroundColor: 'transparent' }}>
             <CardMedia
               component="img"
@@ -51,9 +55,9 @@ const AnimateOnScroll = ({ imageList }) => {
               data-animation={image.animation}
             />
           </Card>
-        </Grid>
+        </div>
       ))}
-    </Grid>
+    </div>
   );
 };
 
