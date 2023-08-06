@@ -1,0 +1,30 @@
+.about-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    margin-top: 5vw;
+  }
+  
+  .about-card {
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .about-content-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .about-image {
+    object-fit: cover;
+    width:20vw !important;
+  }
+  
+  .about-content {
+    padding: 16px;
+  }
+  
+  

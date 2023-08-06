@@ -4,6 +4,7 @@ import { styled } from '@mui/material/styles';
 
 const CustomAppBar = styled(AppBar)({
   backgroundColor: 'transparent',
+   boxShadow: 'none'
 });
 
 const Navbar = () => {

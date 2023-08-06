@@ -1,42 +1,30 @@
 import '../Style/App.css';
-import { Button, Typography, makeStyles } from '@mui/material';
 import Navbar from './Navbar';
-import Images from './Images';
+import DiagonalImages from './DiagonalImages';
+import DiagonalImagesInverted from './DiagonalImagesInverted';
+import About from './About';
+import Header from './Header';
 import 'animate.css/animate.min.css';
+import imageList from '../Data/imagesLinks.json'
+import Images from './imagesWithWrapper';
 
-
-const imageList = [
-  {
-    id: 'Hand',
-    link: 'https://i.ibb.co/d5f3Xxh/Untitled-design.png',
-    animation: 'fadeIn', 
-    aspect:'square'
-  },
-  {
-    id: 'Painting',
-    link: 'https://i.ibb.co/rwzDWDm/woman-painting.jpg',
-    animation: 'zoomIn', 
-    aspect:'square'
-
-  },
-  {
-    id: 'Brushes',
-    link: 'https://i.ibb.co/p26D0Wt/c81b5db5-9c7c-448a-842e-c8387a5626a3.jpg',
-    animation: 'zoomIn', 
-    aspect:'square'
-
-  }
-];
+const firstThreeImages = imageList.slice(0, 3);
+const lastThreeImages = imageList.slice(3, 6);
 
 function App() {
   return (
     <div className="App">
-    <Navbar />
-    <Images imageList = {imageList} />
+      <Navbar />
+      {/* <DiagonalImages imageList = {lastThreeImages} /> */}
+      <Images imageList={lastThreeImages} />
+      <Header /> 
+      {/* <DiagonalImagesInverted imageList={firstThreeImages} /> */}
+      <About />
     </div>
   );
 }
 
 export default App;
 
-<a href="https://ibb.co/dBs9Wbd"><img src="" alt="c81b5db5-9c7c-448a-842e-c8387a5626a3" border="0" /></a>
+
+
